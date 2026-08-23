@@ -127,13 +127,37 @@ document.addEventListener("DOMContentLoaded", () => {
     /* ---------- Formulario de reserva ---------- */
     const formReserva = document.getElementById("formReserva");
 
+    const NOMBRES_SERVICIOS = {
+        cejas: "Diseño y arreglo de cejas",
+        limpieza: "Limpieza facial profunda",
+        maquillaje: "Maquillaje para eventos",
+        otro: "Otro servicio",
+    };
+
+    const NUMERO_WHATSAPP = "573022957345";
+
+
     formReserva.addEventListener("submit", (evento) => {
         evento.preventDefault();
         const datos = new FormData(formReserva);
-        const nombre = datos.get("nombre");
 
-        // Aquí, más adelante, se puede conectar a WhatsApp, un correo
-        // automático o un backend propio para guardar la reserva de verdad.
+        const nombre = datos.get("nombre");
+        const servicioLegible = NOMBRES_SERVICIOS[datos.get("servicio")] || datos.get("servicio");
+        const fecha = datos.get("fecha");
+        const hora = datos.get("hora");
+        const telefono = datos.get("telefono");
+
+        const mensaje =
+            `¡Hola! Quiero confirmar una cita%0A` +
+            `*Nombre:* ${nombre}%0A` +
+            `*Servicio:* ${servicioLegible}%0A` +
+            `*Fecha:* ${fecha}%0A` +
+            `*Hora:* ${hora}%0A` +
+            `*Teléfono:* ${telefono}`;
+
+        const urlWhatsApp = `https://wa.me/${NUMERO_WHATSAPP}?text=${mensaje}`;
+        window.open(urlWhatsApp, "_blank");
+
         mostrarToast(`¡Gracias, ${nombre}! Tu solicitud de cita fue recibida ✿`);
         formReserva.reset();
     });
