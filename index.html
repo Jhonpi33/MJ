@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MJ · Maquillaje y Cosmetología</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- ===================== HEADER / NAV ===================== -->
+    <header class="header" id="header">
+        <div class="contenedor header__inner">
+
+            <!-- ESPACIO PARA TU LOGO: reemplaza este bloque por <img src="tu-logo.png" alt="MJ">  -->
+            <a href="#inicio" class="logo" aria-label="Ir al inicio">
+                <span class="logo__icono" aria-hidden="true">✿</span>
+                <span class="logo__texto"> M <em> J </em></span>
+            </a>
+
+            <nav class="nav" id="nav">
+                <a href="#inicio">Inicio</a>
+                <a href="#servicios">Servicios</a>
+                <a href="#catalogo">Catálogo</a>
+                <a href="#reservar">Reservar cita</a>
+                <a href="#contacto">Contacto</a>
+            </nav>
+
+            <div class="header__acciones">
+                <button class="btn-carrito" id="btnCarrito" aria-label="Abrir carrito de compras">
+                    <svg viewBox="0 0 24 24" class="icono-carrito" aria-hidden="true">
+                        <path d="M6 6h15l-1.5 9h-12z" />
+                        <path d="M6 6L4.5 2H2" />
+                        <circle cx="9" cy="20" r="1.4" />
+                        <circle cx="18" cy="20" r="1.4" />
+                    </svg>
+                    <span class="carrito__contador" id="carritoContador">0</span>
+                </button>
+                <button class="btn-menu" id="btnMenu" aria-label="Abrir menú" aria-expanded="false">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+
+        </div>
+    </header>
+
+    <!-- ===================== HERO ===================== -->
+    <section class="hero" id="inicio">
+        <div class="hero__mancha" aria-hidden="true"></div>
+        <div class="contenedor hero__inner">
+            <p class="hero__eyebrow reveal">Cejas · Piel · Labios · Pestañas</p>
+            <h1 class="hero__titulo reveal">
+                Realza tu belleza,<br>
+                <span class="hero__titulo-trazo">a tu manera</span>
+            </h1>
+            <p class="hero__texto reveal">
+                Servicios de cosmetología y una selección de productos pensados para tu rutina de belleza.
+                Diseño de cejas, limpiezas faciales y todo lo que necesitas para brillar.
+            </p>
+            <div class="hero__cta reveal">
+                <a href="#catalogo" class="btn btn--relleno">Ver catálogo</a>
+                <a href="#reservar" class="btn btn--contorno">Reservar cita</a>
+            </div>
+        </div>
+    </section>
+
+    <div class="divisor" aria-hidden="true">
+        <svg viewBox="0 0 1200 60" preserveAspectRatio="none">
+            <path d="M0,30 Q150,60 300,30 T600,30 T900,30 T1200,30 V60 H0 Z" />
+        </svg>
+    </div>
+
+    <!-- ===================== SERVICIOS ===================== -->
+    <section class="servicios" id="servicios">
+        <div class="contenedor">
+            <p class="seccion__eyebrow reveal">Lo que hacemos</p>
+            <h2 class="seccion__titulo reveal">Nuestros servicios</h2>
+
+            <div class="grid-servicios">
+
+                <article class="tarjeta-servicio reveal">
+                    <div class="tarjeta-servicio__icono" aria-hidden="true">〰️</div>
+                    <h3>Diseño y arreglo de cejas</h3>
+                    <p>Perfilado a tu forma de rostro, con depilación e hidratación incluida para un acabado natural.
+                    </p>
+                    <span class="tarjeta-servicio__precio">Desde $25.000</span>
+                </article>
+
+                <article class="tarjeta-servicio reveal">
+                    <div class="tarjeta-servicio__icono" aria-hidden="true">✧</div>
+                    <h3>Limpieza facial profunda</h3>
+                    <p>Exfoliación, extracción y mascarilla para dejar tu piel fresca, limpia y luminosa.</p>
+                    <span class="tarjeta-servicio__precio">Desde $45.000</span>
+                </article>
+
+                <article class="tarjeta-servicio reveal">
+                    <div class="tarjeta-servicio__icono" aria-hidden="true">❀</div>
+                    <h3>Maquillaje para eventos</h3>
+                    <p>Maquillaje profesional para fiestas, sesiones de fotos o cualquier ocasión especial.</p>
+                    <span class="tarjeta-servicio__precio">Desde $60.000</span>
+                </article>
+
+                <!-- Duplica esta <article> para agregar más servicios -->
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== CATÁLOGO DE PRODUCTOS ===================== -->
+    <section class="catalogo" id="catalogo">
+        <div class="contenedor">
+            <p class="seccion__eyebrow reveal">Para llevar</p>
+            <h2 class="seccion__titulo reveal">Catálogo de productos</h2>
+            <p class="seccion__subtitulo reveal">Toca "Agregar" para añadir un producto al carrito.</p>
+
+            <div class="grid-productos">
+
+                <!-- ============================================================
+             TARJETA DE PRODUCTO — copia este bloque completo para cada
+             producto nuevo. Reemplaza:
+             1) la clase "placeholder-img" por <img src="tu-foto.jpg" alt="...">
+             2) el texto del nombre, la categoría y el precio
+             3) el data-precio y data-nombre del botón (para el carrito)
+        ============================================================= -->
+                <article class="tarjeta-producto reveal">
+                    <div class="tarjeta-producto__imagen placeholder-img" aria-hidden="true">
+                        <span>Tu foto aquí</span>
+                    </div>
+                    <span class="tarjeta-producto__etiqueta">Nuevo</span>
+                    <div class="tarjeta-producto__info">
+                        <p class="tarjeta-producto__categoria">Pestañas</p>
+                        <h3 class="tarjeta-producto__nombre">Pestañina volumen intenso</h3>
+                        <div class="tarjeta-producto__fila">
+                            <span class="tarjeta-producto__precio">$18.000</span>
+                            <button class="btn-agregar" data-nombre="Pestañina volumen intenso"
+                                data-precio="18000">Agregar</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="tarjeta-producto reveal">
+                    <div class="tarjeta-producto__imagen placeholder-img" aria-hidden="true">
+                        <span>Tu foto aquí</span>
+                    </div>
+                    <div class="tarjeta-producto__info">
+                        <p class="tarjeta-producto__categoria">Labios</p>
+                        <h3 class="tarjeta-producto__nombre">Gloss labial hidratante</h3>
+                        <div class="tarjeta-producto__fila">
+                            <span class="tarjeta-producto__precio">$15.000</span>
+                            <button class="btn-agregar" data-nombre="Gloss labial hidratante"
+                                data-precio="15000">Agregar</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="tarjeta-producto reveal">
+                    <div class="tarjeta-producto__imagen placeholder-img" aria-hidden="true">
+                        <span>Tu foto aquí</span>
+                    </div>
+                    <span class="tarjeta-producto__etiqueta">Top ventas</span>
+                    <div class="tarjeta-producto__info">
+                        <p class="tarjeta-producto__categoria">Cabello</p>
+                        <h3 class="tarjeta-producto__nombre">Set de clips decorativos</h3>
+                        <div class="tarjeta-producto__fila">
+                            <span class="tarjeta-producto__precio">$12.000</span>
+                            <button class="btn-agregar" data-nombre="Set de clips decorativos"
+                                data-precio="12000">Agregar</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="tarjeta-producto reveal">
+                    <div class="tarjeta-producto__imagen placeholder-img" aria-hidden="true">
+                        <span>Tu foto aquí</span>
+                    </div>
+                    <div class="tarjeta-producto__info">
+                        <p class="tarjeta-producto__categoria">Cejas</p>
+                        <h3 class="tarjeta-producto__nombre">Gel fijador de cejas</h3>
+                        <div class="tarjeta-producto__fila">
+                            <span class="tarjeta-producto__precio">$14.000</span>
+                            <button class="btn-agregar" data-nombre="Gel fijador de cejas"
+                                data-precio="14000">Agregar</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="tarjeta-producto reveal">
+                    <div class="tarjeta-producto__imagen placeholder-img" aria-hidden="true">
+                        <span>Tu foto aquí</span>
+                    </div>
+                    <div class="tarjeta-producto__info">
+                        <p class="tarjeta-producto__categoria">Piel</p>
+                        <h3 class="tarjeta-producto__nombre">Mascarilla facial de arcilla</h3>
+                        <div class="tarjeta-producto__fila">
+                            <span class="tarjeta-producto__precio">$20.000</span>
+                            <button class="btn-agregar" data-nombre="Mascarilla facial de arcilla"
+                                data-precio="20000">Agregar</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="tarjeta-producto reveal">
+                    <div class="tarjeta-producto__imagen placeholder-img" aria-hidden="true">
+                        <span>Tu foto aquí</span>
+                    </div>
+                    <span class="tarjeta-producto__etiqueta">Nuevo</span>
+                    <div class="tarjeta-producto__info">
+                        <p class="tarjeta-producto__categoria">Labios</p>
+                        <h3 class="tarjeta-producto__nombre">Set de labiales mate</h3>
+                        <div class="tarjeta-producto__fila">
+                            <span class="tarjeta-producto__precio">$22.000</span>
+                            <button class="btn-agregar" data-nombre="Set de labiales mate"
+                                data-precio="22000">Agregar</button>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <div class="divisor divisor--invertido" aria-hidden="true">
+        <svg viewBox="0 0 1200 60" preserveAspectRatio="none">
+            <path d="M0,30 Q150,60 300,30 T600,30 T900,30 T1200,30 V60 H0 Z" />
+        </svg>
+    </div>
+
+    <!-- ===================== RESERVAR CITA ===================== -->
+    <section class="reservar" id="reservar">
+        <div class="contenedor reservar__inner">
+            <div class="reservar__texto">
+                <p class="seccion__eyebrow reveal">Agenda tu momento</p>
+                <h2 class="seccion__titulo reveal">Reserva tu cita</h2>
+                <p class="reveal">
+                    Cuéntanos qué servicio te interesa y cuándo te queda mejor.
+                    Te confirmaremos por WhatsApp o correo lo antes posible.
+                </p>
+            </div>
+
+            <form class="form-reserva reveal" id="formReserva">
+                <label>
+                    Nombre completo
+                    <input type="text" name="nombre" placeholder="Tu nombre" required>
+                </label>
+                <label>
+                    Servicio
+                    <select name="servicio" required>
+                        <option value="">Selecciona un servicio</option>
+                        <option value="cejas">Diseño y arreglo de cejas</option>
+                        <option value="limpieza">Limpieza facial profunda</option>
+                        <option value="maquillaje">Maquillaje para eventos</option>
+                        <option value="otro">Otro</option>
+                    </select>
+                </label>
+                <div class="form-reserva__fila">
+                    <label>
+                        Fecha
+                        <input type="date" name="fecha" required>
+                    </label>
+                    <label>
+                        Hora
+                        <input type="time" name="hora" required>
+                    </label>
+                </div>
+                <label>
+                    Teléfono de contacto
+                    <input type="tel" name="telefono" placeholder="Ej: 300 123 4567" required>
+                </label>
+                <button type="submit" class="btn btn--relleno">Confirmar reserva</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- ===================== CONTACTO ===================== -->
+    <section class="contacto" id="contacto">
+        <div class="contenedor contacto__inner">
+            <div>
+                <p class="seccion__eyebrow reveal">Hablemos</p>
+                <h2 class="seccion__titulo reveal">Contáctanos</h2>
+                <p class="reveal">También puedes escribirnos directo por WhatsApp o correo.</p>
+            </div>
+
+            <ul class="lista-contacto reveal">
+                <li>
+                    <span aria-hidden="true">📞</span>
+                    <a href="https://wa.me/573022957345" target="_blank" rel="noopener">+57 302 295 7345</a>
+                </li>
+                <li>
+                    <span aria-hidden="true">✉️</span>
+                    <a href="mailto:santosplatamariajose@gmail.com">santosplatamariajose@gmail.com</a>
+                </li>
+                <li>
+                    <span aria-hidden="true">📍</span>
+                    <span>San Gil, Santander, Colombia</span>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- ===================== FOOTER ===================== -->
+    <footer class="footer">
+        <div class="contenedor footer__inner">
+            <a href="#inicio" class="logo logo--footer">
+                <span class="logo__icono" aria-hidden="true">✿</span>
+                <span class="logo__texto">M <em> J</em></span>
+            </a>
+            <nav class="footer__nav">
+                <a href="#servicios">Servicios</a>
+                <a href="#catalogo">Catálogo</a>
+                <a href="#reservar">Reservar</a>
+                <a href="#contacto">Contacto</a>
+            </nav>
+            <!-- ESPACIO PARA REDES SOCIALES: agrega aquí tus íconos/enlaces de Instagram, TikTok, etc. -->
+            <p class="footer__nota">© 2026 MJ. Hecho con ❤ para realzar tu belleza.</p>
+        </div>
+    </footer>
+
+    <!-- ===================== CARRITO (panel lateral) ===================== -->
+    <div class="carrito-overlay" id="carritoOverlay"></div>
+    <aside class="carrito-panel" id="carritoPanel" aria-label="Carrito de compras">
+        <div class="carrito-panel__header">
+            <h3>Tu carrito</h3>
+            <button id="cerrarCarrito" aria-label="Cerrar carrito">✕</button>
+        </div>
+        <ul class="carrito-panel__lista" id="carritoLista">
+            <li class="carrito-panel__vacio" id="carritoVacio">Aún no has agregado productos ✿</li>
+        </ul>
+        <div class="carrito-panel__footer">
+            <div class="carrito-panel__total">
+                <span>Total</span>
+                <span id="carritoTotal">$0</span>
+            </div>
+            <button class="btn btn--relleno btn--ancho">Finalizar por WhatsApp</button>
+        </div>
+    </aside>
+
+    <!-- ===================== TOAST DE CONFIRMACIÓN ===================== -->
+    <div class="toast" id="toast"></div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
