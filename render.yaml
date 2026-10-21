@@ -1,0 +1,7 @@
+# Blueprint de Render: landing estática MJ — Tienda de Cosmetología
+services:
+  - type: web
+    name: mj-cosmetologia
+    runtime: static
+    buildCommand: ''
+    staticPublishPath: ./
